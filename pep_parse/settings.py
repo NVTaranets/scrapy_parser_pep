@@ -93,7 +93,7 @@ ROBOTSTXT_OBEY = True
 OUTPUT_DIR = BASE_DIR / OUTPUT_SUB_DIR
 
 FEEDS = {
-    '%(BASE_DIR)s/results/pep_%(time)s.csv': {
+    'results/pep_%(time)s.csv': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
     },
