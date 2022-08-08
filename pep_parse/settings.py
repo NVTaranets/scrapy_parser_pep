@@ -7,7 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-from pep_parse.constants import OUTPUT_DIR
+from pep_parse.constants import BASE_DIR, OUTPUT_SUB_DIR
 
 BOT_NAME = 'pep_parse'
 
@@ -90,10 +90,10 @@ ROBOTSTXT_OBEY = True
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
+OUTPUT_DIR = BASE_DIR / OUTPUT_SUB_DIR 
 
 FEEDS = {
-    OUTPUT_DIR + '/' + 'pep_%(time)s.csv': {
+    '%(OUTPUT_DIR)s/pep_%(time)s.csv': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
     },
