@@ -90,7 +90,7 @@ ROBOTSTXT_OBEY = True
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-OUTPUT_DIR = BASE_DIR / OUTPUT_SUB_DIR 
+OUTPUT_DIR = BASE_DIR / OUTPUT_SUB_DIR
 
 FEEDS = {
     '%(OUTPUT_DIR)s/pep_%(time)s.csv': {
