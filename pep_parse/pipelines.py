@@ -8,7 +8,7 @@
 from collections import defaultdict
 from datetime import datetime
 
-from pep_parse.constants import DATA_TIME_FORMAT, OUTPUT_DIR
+from pep_parse.constants import BASE_DIR, DATA_TIME_FORMAT, OUTPUT_DIR
 
 # from itemadapter import ItemAdapter
 
@@ -26,6 +26,7 @@ class PepParsePipeline:
 
     def close_spider(self, spider):
         time = datetime.now().strftime(DATA_TIME_FORMAT)
+        print(BASE_DIR)
         with open(
             f'{OUTPUT_DIR}/status_summary_{time}.csv',
             mode='w',
