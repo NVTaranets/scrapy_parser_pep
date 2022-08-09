@@ -22,7 +22,7 @@ class PepParsePipeline:
         time = datetime.now().strftime(DATA_TIME_FORMAT)
         RESULT_DIR.mkdir(exist_ok=True)
         # file_name = RESULT_DIR / f'status_summary_{time}.csv'
-        file_name = f'result/status_summary_{time}.csv'
+        file_name = f'results/status_summary_{time}.csv'
         with open(
             file_name,
             mode='w',
