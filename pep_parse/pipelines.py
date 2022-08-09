@@ -4,6 +4,8 @@ from datetime import datetime
 
 from pep_parse.constants import BASE_DIR, DATA_TIME_FORMAT, OUTPUT_SUB_DIR
 
+RESULT_DIR = BASE_DIR / OUTPUT_SUB_DIR
+
 
 class PepParsePipeline:
 
@@ -18,9 +20,8 @@ class PepParsePipeline:
 
     def close_spider(self, spider):
         time = datetime.now().strftime(DATA_TIME_FORMAT)
-        RESULT_DIR = BASE_DIR / OUTPUT_SUB_DIR
         RESULT_DIR.mkdir(exist_ok=True)
-        file_name =  RESULT_DIR / f'status_summary_{time}.csv'
+        file_name = RESULT_DIR / f'status_summary_{time}.csv'
         with open(
             file_name,
             mode='w',
