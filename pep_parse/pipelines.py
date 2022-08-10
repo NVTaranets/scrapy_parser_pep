@@ -21,7 +21,7 @@ class PepParsePipeline:
     def close_spider(self, spider):
         time = datetime.now().strftime(DATA_TIME_FORMAT)
         RESULT_DIR.mkdir(exist_ok=True)
-        file_name = RESULT_DIR / f'status_summary_{time}.csv'
+        file_name = BASE_DIR / OUTPUT_SUB_DIR / f'status_summary_{time}.csv' 
         with open(
             file_name,
             mode='w',
